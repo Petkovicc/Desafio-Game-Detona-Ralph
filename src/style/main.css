@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../img/wall.png);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 5px solid purple;
+}
+
+.panel {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square{
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000000;
+    background-color: #15e19d;
+}
+
+.enemy{
+    background-image: url(../img/ralph.png);
+    background-size: cover;
+    background-color: #000000;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2){
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .square {
+        height: 120px;
+        width: 120px;
+    }
+
+    .panel {
+        flex-direction: column;
+    }
+
+    .panel-row {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .square {
+        height: 80px;
+        width: 80px;
+    }
+
+    .panel {
+        flex-direction: column;
+    }
+
+    .panel-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-time h2,
+    .menu-score h2,
+    .menu-lives h2 {
+        font-size: 14px;
+        margin: 5px;
+    }
+}
